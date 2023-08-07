@@ -75,10 +75,6 @@ const NavBar = ({ setSelectedTopic }) => {
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold rounded-lg leading-6 text-gray-900  hover:bg-gray-400 p-2">
               Topics
-              <ChevronDownIcon
-                className="h-5 w-5 flex-none text-black"
-                aria-hidden="true"
-              />
             </Popover.Button>
 
             <Transition
@@ -120,7 +116,6 @@ const NavBar = ({ setSelectedTopic }) => {
               to={`/users`}
             >
               Login
-              <ArrowLongRightIcon className="h-9 w-9 p-2 text-black-500  hover:bg-gray-400" />
             </Link>
           ) : (
             <p
@@ -128,7 +123,6 @@ const NavBar = ({ setSelectedTopic }) => {
               onClick={handleLogoutClick}
             >
               Logout
-              <ArrowLongLeftIcon className="h-8 w-8 text-black-500" />
             </p>
           )}
         </div>
@@ -162,13 +156,6 @@ const NavBar = ({ setSelectedTopic }) => {
                       </Link>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-gray-400">
                         Topics
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "rotate-180" : "",
-                            "h-5 w-5 flex-none"
-                          )}
-                          aria-hidden="true"
-                        />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
                         {[...topics].map((topic) => (
@@ -205,7 +192,6 @@ const NavBar = ({ setSelectedTopic }) => {
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Login
-                        <ArrowLongRightIcon className="h-8 w-8 text-black-500" />
                       </Link>
                     </div>
                   ) : (
@@ -214,7 +200,6 @@ const NavBar = ({ setSelectedTopic }) => {
                       onClick={handleLogoutClick}
                     >
                       Logout
-                      <ArrowLongLeftIcon className="h-8 w-8 text-black-500" />
                     </p>
                   )}
                 </div>
